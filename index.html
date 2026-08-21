@@ -1,105 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Course Studio is a two-semester, cross-disciplinary web product program where designers, front-end developers, and back-end developers ship together.">
-  <meta name="theme-color" content="#11110f">
-  <title>Course Studio — Build products, not just portfolios</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Course Studio home"><span>CS</span> Course Studio</a>
-    <nav aria-label="Primary navigation">
-      <a href="#model">The model</a><a href="#curriculum">Curriculum</a><a href="#projects">Projects</a><a href="#research">Research</a>
-    </nav>
-      <a class="button button-small" href="curriculum-map.html">Explore the map</a>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-copy">
-        <p class="eyebrow"><span></span> Two semesters · One product team</p>
-        <h1>Learn your craft.<br><em>Ship as a team.</em></h1>
-        <p class="lede">A university web program where UI/UX, front-end, and back-end students don’t work beside each other—they build <strong>through</strong> each other.</p>
-        <div class="hero-actions"><a class="button" href="curriculum-map.html">View curriculum map <span aria-hidden="true">↗</span></a><a class="text-link" href="#workflow">See how the studio works →</a></div>
-      </div>
-      <div class="hero-visual" aria-label="A feature moving through three connected disciplines">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="feature-card"><span class="micro">LIVE FEATURE</span><strong>Community booking flow</strong><div class="progress"><i></i></div><small>Integrated build · Sprint 04</small></div>
-        <div class="role-pill role-design"><span>01</span> Research + flows</div>
-        <div class="role-pill role-front"><span>02</span> Interface + states</div>
-        <div class="role-pill role-back"><span>03</span> Contract + data</div>
-        <p class="loop-label">REVIEW · TEST · LEARN · ITERATE</p>
-      </div>
-      <div class="hero-stamp" aria-hidden="true">EST.<br>2026</div>
-    </section>
-
-    <section class="metrics" aria-label="Program facts">
-      <div><strong>30</strong><span>weeks of practice</span></div><div><strong>3</strong><span>disciplines, one team</span></div><div><strong>12+</strong><span>integrated releases</span></div><div><strong>100%</strong><span>work reviewed by peers</span></div>
-    </section>
-
-    <section class="section model" id="model">
-      <div class="section-heading"><p class="eyebrow">THE OPERATING MODEL</p><h2>Specialists by craft.<br><em>Teammates by default.</em></h2><p>Students build depth in one discipline while learning the language, constraints, and quality signals of the other two.</p></div>
-      <div class="track-grid">
-        <article class="track track-design"><p>01 / UI·UX</p><h3>Design for evidence,<br>not approval.</h3><ul><li>Discovery, interviews & synthesis</li><li>Information architecture & flows</li><li>Accessible interaction & content</li><li>Systems, prototypes & handoff</li></ul><span class="track-output">Outputs → tested decisions + specs</span></article>
-        <article class="track track-front"><p>02 / FRONT END</p><h3>Make every state<br>work for everyone.</h3><ul><li>Semantic HTML, modern CSS & TypeScript</li><li>React components & state</li><li>Accessibility & performance</li><li>Unit, integration & browser testing</li></ul><span class="track-output">Outputs → resilient interfaces</span></article>
-        <article class="track track-back"><p>03 / BACK END</p><h3>Build the trust<br>behind the screen.</h3><ul><li>TypeScript, Node & HTTP APIs</li><li>PostgreSQL & data modeling</li><li>Auth, security & observability</li><li>Testing, CI/CD & cloud delivery</li></ul><span class="track-output">Outputs → reliable services + contracts</span></article>
-      </div>
-    </section>
-
-    <section class="workflow section" id="workflow">
-      <div class="workflow-intro"><p class="eyebrow light">EVERY FEATURE, END TO END</p><h2>The handoff is not<br>the finish line.</h2><p>Teams repeat the full product loop from week one. A change in one track becomes a conversation—and often new work—in the others.</p><div class="change-card"><span>⚡ CHANGE EVENT</span><p>“Users need to book for a group, not just themselves.”</p><small>Teams revise the flow, component states, schema, tests, and release notes together.</small></div></div>
-      <ol class="workflow-list">
-        <li><span>01</span><div><strong>Frame</strong><small>brief · constraints · success measure</small></div></li>
-        <li><span>02</span><div><strong>Discover + design</strong><small>evidence · flow · prototype</small></div></li>
-        <li><span>03</span><div><strong>Agree contracts</strong><small>states · API · data · acceptance criteria</small></div></li>
-        <li><span>04</span><div><strong>Build in slices</strong><small>branches · pairing · pull requests</small></div></li>
-        <li><span>05</span><div><strong>Review + verify</strong><small>design QA · tests · accessibility · security</small></div></li>
-        <li><span>06</span><div><strong>Release + learn</strong><small>deploy · observe · retro · backlog</small></div></li>
-      </ol>
-    </section>
-
-    <section class="section curriculum" id="curriculum">
-      <div class="section-heading split"><div><p class="eyebrow">THE CURRICULUM</p><h2>From first commit<br>to real release.</h2></div><p>Each module has a shared studio, focused craft instruction, and one integrated artifact. No track can finish alone.</p></div>
-      <div class="semester-tabs" role="tablist" aria-label="Choose semester"><button role="tab" aria-selected="true" aria-controls="semester-1" id="tab-1">Semester 01 <small>Foundations + fluency</small></button><button role="tab" aria-selected="false" aria-controls="semester-2" id="tab-2" tabindex="-1">Semester 02 <small>Delivery + leadership</small></button></div>
-      <div id="semester-1" class="semester-panel" role="tabpanel" aria-labelledby="tab-1"></div>
-      <div id="semester-2" class="semester-panel" role="tabpanel" aria-labelledby="tab-2" hidden></div>
-    </section>
-
-    <section class="projects section" id="projects">
-      <div class="section-heading"><p class="eyebrow light">PROJECT PROGRESSION</p><h2>Not clones.<br><em>Products with consequences.</em></h2></div>
-      <div class="project-list">
-        <article><span>01 · WEEKS 5–8</span><div><h3>Service access<br>feature</h3><p>Improve one high-friction journey for a campus or civic service using interviews, an accessible interface, and a thin API.</p></div><ul><li>5 user conversations</li><li>1 vertical slice</li><li>1 observed usability test</li></ul></article>
-        <article><span>02 · WEEKS 11–15</span><div><h3>Community operations<br>increment</h3><p>Add scheduling and staff workflows to a live shared codebase. Mid-sprint policy changes force contract negotiation and migration.</p></div><ul><li>Role-based workflows</li><li>Design system contribution</li><li>Staged release + retro</li></ul></article>
-        <article class="capstone"><span>03 · SEMESTER 02</span><div><h3>Partner product<br>capstone</h3><p>Discover, scope, build, secure, deploy, and operate a useful product for a real partner—then hand it to the next team.</p></div><ul><li>3 public increments</li><li>Measured outcomes</li><li>Runbook + handover</li></ul></article>
-      </div>
-    </section>
-
-    <section class="assessment section">
-      <div><p class="eyebrow">ASSESS WHAT MATTERS</p><h2>The product counts.<br>So does the practice.</h2><p>Individual craft remains visible inside team delivery. Evidence comes from repositories, research logs, critiques, releases, and reflection—not a polished demo alone.</p></div>
-      <div class="assessment-ring" aria-label="Assessment weighting"><div><strong>40%</strong><span>craft quality</span></div></div>
-      <dl><div><dt>30%</dt><dd><strong>Integrated delivery</strong><br>contracts, quality, usable increments</dd></div><div><dt>20%</dt><dd><strong>Team practice</strong><br>reviews, communication, recovery</dd></div><div><dt>10%</dt><dd><strong>Professional reflection</strong><br>evidence, decisions, next steps</dd></div></dl>
-    </section>
-
-    <section class="research section" id="research">
-      <div class="section-heading split"><div><p class="eyebrow">RESEARCH FOUNDATIONS</p><h2>Built for the team<br>students will join.</h2></div><p>The program prioritizes durable practices over tool collecting: accessibility as a requirement, short feedback loops, secure defaults, documented decisions, and responsible human review of AI-assisted work.</p></div>
-      <div class="research-grid">
-        <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noreferrer"><span>01</span><strong>W3C · WCAG 2.2</strong><p>Accessibility criteria shape design, implementation, and verification—not a final audit.</p><i>↗</i></a>
-        <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests" target="_blank" rel="noreferrer"><span>02</span><strong>GitHub · Collaboration</strong><p>Issues, branches, pull requests, review, and protected workflows form the studio’s operating system.</p><i>↗</i></a>
-        <a href="https://dora.dev/research/2024/dora-report/" target="_blank" rel="noreferrer"><span>03</span><strong>DORA · Delivery research</strong><p>Small batches, user focus, quality feedback, and healthy teams guide project cadence.</p><i>↗</i></a>
-        <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noreferrer"><span>04</span><strong>OWASP · Top 10</strong><p>Threat modeling, access control, validation, dependencies, and logging enter before deployment.</p><i>↗</i></a>
-        <a href="https://survey.stackoverflow.co/2025/" target="_blank" rel="noreferrer"><span>05</span><strong>Stack Overflow · 2025 survey</strong><p>Technology choices and AI literacy reflect current practice while fundamentals stay central.</p><i>↗</i></a>
-        <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noreferrer"><span>06</span><strong>NIST · AI RMF</strong><p>Students disclose, verify, test, and document AI assistance instead of outsourcing judgment.</p><i>↗</i></a>
-      </div>
-      <p class="research-note">Curriculum reviewed annually against current job postings, platform guidance, accessibility standards, graduate interviews, and partner feedback.</p>
-    </section>
-
-    <section class="cta" id="apply"><p class="eyebrow light">READY TO WORK DIFFERENTLY?</p><h2>Don’t just learn<br>the stack. <em>Join the studio.</em></h2><p>Two semesters. Three disciplines. One shared standard for work that matters.</p><a class="button button-light" href="mailto:studio@example.edu">Request the program guide →</a><div class="cta-meta"><span>30 academic weeks</span><span>In-person studio + lab</span><span>Portfolio-ready evidence</span></div></section>
-  </main>
-  <footer><a class="brand" href="#top"><span>CS</span> Course Studio</a><p>A university program for the way digital products are actually made.</p><p>© 2026 Course Studio</p></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0; url=curriculum-flow.html" />
+    <title>Course Studio Curriculum</title>
+    <script>location.replace('curriculum-flow.html');</script>
+  </head>
+  <body>
+    <p>Opening the <a href="curriculum-flow.html">Course Studio curriculum flow</a>.</p>
+  </body>
 </html>
