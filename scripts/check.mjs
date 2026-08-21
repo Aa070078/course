@@ -1,8 +1,18 @@
 import { readFile } from 'node:fs/promises';
-const html = await readFile('index.html', 'utf8');
-const css = await readFile('styles.css', 'utf8');
-const required = ['<title>', '<meta name="description"', '<main', '<h1', 'id="curriculum"', 'id="research"'];
-const missing = required.filter((item) => !html.includes(item));
-if (missing.length) throw new Error(`Missing: ${missing.join(', ')}`);
-if (!css.includes('@media')) throw new Error('Responsive styles missing');
-console.log('Semantic and responsive checks passed.');
+
+const [root, map, flow, mapCss, flowCss] = await Promise.all([
+  readFile('index.html', 'utf8'),
+  readFile('curriculum-map.html', 'utf8'),
+  readFile('curriculum-flow.html', 'utf8'),
+  readFile('curriculum-map.css', 'utf8'),
+  readFile('curriculum-flow.css', 'utf8'),
+]);
+
+if (!root.includes('curriculum-flow.html')) throw new Error('Root must direct visitors to the curriculum flow.');
+for (const [name, html] of [['map', map], ['flow', flow]]) {
+  const required = ['<title>', '<main', '<h1'];
+  const missing = required.filter((item) => !html.includes(item));
+  if (missing.length) throw new Error(`${name} missing: ${missing.join(', ')}`);
+}
+if (!mapCss.includes('@media') || !flowCss.includes('@media')) throw new Error('Responsive styles missing.');
+console.log('Curriculum map checks passed.');
