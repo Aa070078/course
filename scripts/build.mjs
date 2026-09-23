@@ -14,5 +14,6 @@ for (const file of [
   'engineering-roadmap.html',
   'engineering-roadmap.css',
   'engineering-roadmap.js',
+  'engineering-roadmap-projects.js',
 ]) await cp(file, `dist/${file}`);
 console.log('Built curriculum maps to dist/');
