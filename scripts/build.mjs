@@ -11,5 +11,8 @@ for (const file of [
   'curriculum-flow.js',
   'technology-icons.css',
   'technology-icons.js',
+  'engineering-roadmap.html',
+  'engineering-roadmap.css',
+  'engineering-roadmap.js',
 ]) await cp(file, `dist/${file}`);
 console.log('Built curriculum maps to dist/');
