@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 
-const [root, map, flow, roadmap, mapCss, flowCss, roadmapCss, sessionMap, clearProjects] = await Promise.all([
+const [root, map, flow, roadmap, mapCss, flowCss, roadmapCss, sessionMap, clearProjects, mentor] = await Promise.all([
   readFile('index.html', 'utf8'),
   readFile('curriculum-map.html', 'utf8'),
   readFile('curriculum-flow.html', 'utf8'),
@@ -10,6 +10,7 @@ const [root, map, flow, roadmap, mapCss, flowCss, roadmapCss, sessionMap, clearP
   readFile('engineering-roadmap.css', 'utf8'),
   readFile('engineering-roadmap-session-map.js', 'utf8'),
   readFile('engineering-roadmap-clear-projects.js', 'utf8'),
+  readFile('mentor-guide.html', 'utf8'),
 ]);
 
 if (!root.includes('engineering-roadmap.html')) throw new Error('Root must direct visitors to the engineering roadmap.');
@@ -21,4 +22,5 @@ for (const [name, html] of [['map', map], ['flow', flow], ['roadmap', roadmap]])
 if (!mapCss.includes('@media') || !flowCss.includes('@media') || !roadmapCss.includes('@media')) throw new Error('Responsive styles missing.');
 if (!sessionMap.includes('Team Integration') || !sessionMap.includes('project-node')) throw new Error('Session project map content missing.');
 if (!clearProjects.includes('WHAT IS THIS PROJECT?') || !clearProjects.includes('Everyone · Software Engineering')) throw new Error('Clear project content missing.');
+if (!mentor.includes('mentor-projects') || !mentor.includes('Mentor preparation map')) throw new Error('Mentor guide missing.');
 console.log('Curriculum map checks passed.');
