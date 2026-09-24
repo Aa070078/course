@@ -33,3 +33,4 @@ dialog strong{font:500 .62rem var(--mono);letter-spacing:.08em;color:var(--orang
 .subtask{border-left:4px solid var(--ink);background:#f5f3ed;padding:.8rem}.subtask.ux{border-color:var(--orange)}.subtask.fe{border-color:var(--blue)}.subtask.be{border-color:var(--green)}.subtask.shared{border-color:var(--ink);grid-column:1/-1;background:var(--ink);color:#fff}
 .subtask h3{margin:0 0 .4rem;font-size:.75rem}.subtask p{margin:0;color:var(--muted);font-size:.7rem;line-height:1.45}.subtask.shared p{color:#d7ddd2}.subtask small{display:block;margin-top:.75rem;font:500 .52rem var(--mono);color:var(--orange)}.subtask.shared small{color:var(--mint)}
 @media(max-width:760px){.project-line{padding-bottom:.35rem}.project-node{flex-basis:190px}.subtask-grid{grid-template-columns:1fr}.subtask.shared{grid-column:auto}}
+.project-description{display:block;color:var(--muted);font-size:.85rem;line-height:1.5;margin-top:.35rem}
