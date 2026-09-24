@@ -19,3 +19,17 @@
 .node .step{font-size:.5rem;margin-bottom:.4rem}
 dialog strong{font:500 .62rem var(--mono);letter-spacing:.08em;color:var(--orange)}
 @media(max-width:760px){.roadmap{min-width:1100px}.phase-banner{position:sticky;left:0}.week-column{min-height:530px}}
+/* One-project-per-session mind map */
+.project-line{display:flex;align-items:stretch;gap:0;background:var(--line);overflow-x:auto}
+.project-node{flex:1 0 205px;min-height:190px;background:var(--paper);border:0;border-right:1px solid var(--line);padding:1rem;text-align:left;cursor:pointer;position:relative;transition:background .15s ease,transform .15s ease}
+.project-node:hover,.project-node:focus-visible{background:#fff;transform:translateY(-3px);outline:2px solid var(--ink);z-index:2}
+.project-code{display:block;font:500 .55rem var(--mono);color:var(--orange);letter-spacing:.05em;margin-bottom:1rem}
+.project-node strong{display:block;font-size:1rem;line-height:1.1;letter-spacing:-.04em;max-width:145px}
+.project-meta{display:block;color:var(--muted);font:.58rem var(--mono);margin-top:2rem}
+.project-rail{display:flex;gap:3px;position:absolute;bottom:1rem;left:1rem;right:1rem}
+.project-rail i{height:4px;flex:1;display:block}.project-rail .ux{background:var(--orange)}.project-rail .fe{background:var(--blue)}.project-rail .be{background:var(--green)}.project-rail .shared{background:var(--ink)}
+.connector{display:grid;place-items:center;background:var(--paper);color:var(--orange);font:1.4rem var(--mono);padding:0 .35rem}
+.subtask-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1.5rem}
+.subtask{border-left:4px solid var(--ink);background:#f5f3ed;padding:.8rem}.subtask.ux{border-color:var(--orange)}.subtask.fe{border-color:var(--blue)}.subtask.be{border-color:var(--green)}.subtask.shared{border-color:var(--ink);grid-column:1/-1;background:var(--ink);color:#fff}
+.subtask h3{margin:0 0 .4rem;font-size:.75rem}.subtask p{margin:0;color:var(--muted);font-size:.7rem;line-height:1.45}.subtask.shared p{color:#d7ddd2}.subtask small{display:block;margin-top:.75rem;font:500 .52rem var(--mono);color:var(--orange)}.subtask.shared small{color:var(--mint)}
+@media(max-width:760px){.project-line{padding-bottom:.35rem}.project-node{flex-basis:190px}.subtask-grid{grid-template-columns:1fr}.subtask.shared{grid-column:auto}}
